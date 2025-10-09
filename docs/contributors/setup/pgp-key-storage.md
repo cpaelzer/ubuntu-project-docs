@@ -1,7 +1,6 @@
 (pgp-key-storage)=
 # PGP key recommendations
 
-
 The Ubuntu Project relies heavily on PGP keys for critical operations. These
 serve to authenticate individuals, sign uploads to the Ubuntu Archive and
 Personal Package Archives (PPAs), and facilitate confidential communication.
@@ -9,10 +8,15 @@ Given their multifaceted utility and integral role in maintaining the integrity
 and security of the project, PGP keys are consequently high-value targets for
 malicious attacks.
 
-In this guide, we will discuss some best practices and recommendations for keeping your PGP key secure.
+In this guide, we will discuss some best practices and
+{ref}`pgp-recommendations` for keeping your PGP key secure and
+further {ref}`pgp-related-aspects`.
 
+(pgp-recommendations)=
+## Recommendations
 
-## Overview
+An overview and summary of the recommendations, then outlined with more detail
+in the sections below.
 
 | Key Security Practice | Description |
 | :---- | :---- |
@@ -22,8 +26,6 @@ In this guide, we will discuss some best practices and recommendations for keepi
 | {ref}`pgp-redundant-hardware-keys` | Configure two identical hardware keys to prevent single points of failure. |
 | {ref}`pgp-expiration-dates-and-regular-key-audits` | Use an expiration date, and on renewal, review your key security practices. |
 | {ref}`pgp-control-and-ownership` | Control and ownership of cryptographic keys. |
-
-Please be aware that {ref}`pgp-these-policies-are-not-static` and require following a set of complex {ref}`pgp-setup-guidelines`.
 
 (pgp-strong-passphrases)=
 ### Strong passphrases
@@ -163,8 +165,23 @@ misleading information during signing operations. Always try to independently
 verify the content being signed, even when using a hardware key, to ensure it
 precisely matches the intended data and is free from malicious alterations.
 
+
+(pgp-related-aspects)=
+## Related aspects
+
+The following sections are not directly recommendations for handling PGP
+keys but important remarks that belong to the same context.
+
+| Key Security Practice | Description |
+| :---- | :---- |
+| {ref}`pgp-these-policies-are-not-static` | Rules are not static and might adapt over time, please revisit these recommendations. |
+| {ref}`pgp-setup-guidelines` | Guidelines with about the commands and tools to create the recommended setup. |
+| {ref}`pgp-alternatives` | Alternatives to the recommended scenario. |
+| {ref}`pgp-as-yet-incomplete-aspects` | Acknowledgement of not yet fully defined aspects. |
+
+
 (pgp-these-policies-are-not-static)=
-## These policies are not static
+### These policies are not static
 
 While not strictly mandatory yet, project members of any level are advised to
 explore all key security practices outlined above and incorporate them into their workflow for PGP
@@ -185,7 +202,7 @@ interactions, would be protected. This is being pushed for and guidance about
 their usage will be included here once possible.
 
 (pgp-setup-guidelines)=
-## Setup guidelines
+### Setup guidelines
 
 The guide on an {ref}`Ubuntu developer’s initial setup <gnupg>` so far only
 outlines the basic usage of PGP keys. Guides on setting up and using PGP-capable
@@ -197,7 +214,8 @@ Until then, starting with these articles on
 and the [YubiKey Guide](https://drduh.github.io/YubiKey-Guide) are a great way
 to begin.
 
-## Alternatives
+(pgp-alternatives)=
+### Alternatives
 
 Hardware-backed PGP keys are the recommended solution because they provide
 protections against key extraction and local compromise, while staying
@@ -235,7 +253,8 @@ Approved alternative recommendations:
 
 * (TBD - None approved yet)
 
-## As-yet incomplete aspects
+(pgp-as-yet-incomplete-aspects)=
+### As-yet incomplete aspects
 
 These recommendations can already be tremendously helpful, but there are
 related aspects that are known to still be missing. Tracking them here
